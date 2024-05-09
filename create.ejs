@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile</title>
+    <link rel="stylesheet" href="/style.css">    
+</head>
+<body>
+    <h1>Create Profile</h1>
+    <form action="/save-profile" method="POST">
+        <div> 
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name.">
+        </div>
+        <div>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" surname="surname" placeholder="Enter your surname.">
+        </div>
+        <div>
+            <label for="Nickname">Nickname:</label>
+            <input type="text" id="nickname" nickname="nickname" placeholder="Enter your nickname.">
+        </div>
+        <div>
+            <label for="Age">Age:</label>
+            <input type="number" id="age" age="age" placeholder="Enter your age.">
+        </div>
+        <div>
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" placeholder="Enter your bio here."></textarea>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+    
+</body>
+</html>
