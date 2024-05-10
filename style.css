@@ -1,0 +1,87 @@
+/* General style settings*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f2ff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    margin-top: 30px;
+}
+
+/* Button styles */
+button {
+    display: inline-block;
+    margin-top: 20px; /* Buton ile form arasındaki boşluk artırıldı */
+    width: 20%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4db8ff; /* Mavi tonu */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0077b3; /* Koyu mavi hover rengi */
+}
+
+/* Form element styles*/
+input[type="text"],
+input[type="number"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Go to Users link styles */
+.go-to-users {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.go-to-users a {
+    background-color: #008bcc; /* Mavi tonu */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.go-to-users a:hover {
+    background-color: #004080; /* Koyu mavi hover rengi */
+}
+/* Page-layout settings */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+textarea {
+    font-family: Arial, sans-serif; /* Yazı tipi ayarı */
+    font-size: 14px; /* Yazı boyutu ayarı */
+    padding: 10px; /* İç boşluk ayarı */
+    border: 1px solid #ccc; /* Kenarlık ayarı */
+    border-radius: 5px; /* Kenar yuvarlaklık ayarı */
+}
