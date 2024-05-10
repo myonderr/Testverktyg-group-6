@@ -6,6 +6,51 @@
     <title>Document</title>
 </head>
 <body>
-Muhammed
+    <h1>Welcome our project as Group 6</h1>
+    <h2>All Users</h2>
+    <hr>
+    <ul id="userList">
+        <!-- Users will be dynamically added here -->
+    </ul>
+    
+    <a href="/create-user">Create user</a>
+
+    <script>
+        // Fetch users from the server
+        fetch('/users')
+            .then(response => response.json())
+            .then(users => {
+                const userList = document.getElementById('userList');
+                users.forEach(user => {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = `/user.html?id=${user.id}`;
+                    link.textContent = user.name;
+                    listItem.appendChild(link);
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'x';
+                    deleteButton.addEventListener('click', () => {
+                        deleteUser(user.id);
+                    });
+                    listItem.appendChild(deleteButton);
+                    userList.appendChild(listItem);
+                });
+            });
+
+        function deleteUser(userId) {
+            fetch(`/users/${userId}`, {
+                method: 'DELETE'
+            })
+            .then(response => {
+                if (response.ok) {
+                    // If successful, remove the user from the list
+                    document.getElementById('userList').querySelector(`[href="/user.html?id=${userId}"]`).parentNode.remove();
+                } else {
+                    console.error('Failed to delete user');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
 </body>
 </html>
