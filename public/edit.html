@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="go-to-users">
+            <a href="index.html">Go to Users</a>
+        </div>
+    <h1>Edit Profile</h1>
+    <form id="profileForm" action="/save-profile" method="POST"> <!-- Form methodunu POST olarak değiştiriyoruz -->
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your profile name.">
+        </div>
+        <div>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" placeholder="Enter your surname.">
+        </div>
+        <div>
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" name="nickname" placeholder="Enter your nickname.">
+            <!-- attribute name'i düzelttik -->
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age.">
+            <!-- type'ı number olarak değiştirdik -->
+        </div>
+        <div>
+            <label for="bio">Bio:</label>
+            <input type="text" id="bio" name="bio" placeholder="Enter your bio.">
+        </div>
+        <button type="submit">Save</button>
+    </form>
+     <script defer src="/edit.js"></script>  <!--JavaScript dosyasını dahil ediyoruz -->
+</body>
+</html>
